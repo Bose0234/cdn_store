@@ -90,11 +90,110 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.separate-components {
+  width: calc(100% - 250px);
+  min-height: 100vh;
+  padding: 0;
+  transition: all 1s;
+  margin-left: 250px;
+}
+
+.sidebar-separate-components {
+  position: fixed;
+  top: 91px !important;
+  inset: 0;
+  width: 250px;
+  background: #0a2463;
+  border-left: 10px solid #0a2463;
+  overflow: hidden;
+  transition: 1s;
+  z-index: 999999999;
+  padding: 50px 0px;
+}
+
+.sidebar-separate-components ul.side-menu {
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  max-height: 550px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-left: 0;
+}
+.sidebar-separate-components ul.side-menu li a {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.sidebar-separate-components ul.side-menu li:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.sidebar-separate-components ul.side-menu li a:hover {
+  background: #ffffff;
+  color: #0a2463;
+}
+
+.sidebar-separate-components ul.side-menu li a {
+  position: relative;
+  display: flex;
+  width: 100%;
+  color: #ffffff;
+  width: 100%;
+  text-decoration: none;
+  transition: 1s;
+}
+
+.sidebar-separate-components ul.side-menu li a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 65px;
+  text-align: center;
+}
+.sidebar-separate-components ul.side-menu li a .icon i {
+  font-size: 22px;
+}
+
+.sidebar-separate-components ul.side-menu li a span.title {
+  position: relative;
+  display: block;
+  line-height: 60px;
+  padding: 0 10px;
+  height: 60px;
+  text-align: start;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.ib-brand {
+  background: none;
+  font-size: 25px;
+  position: relative;
+  color: white;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.ib-brand span.title {
+  line-height: 70px;
+  font-weight: 700;
+  font-size: 25px;
+  margin-left: 15px;
+  margin-bottom: -5px;
+  width: 85px;
+}
+
 section.header {
   position: absolute;
   z-index: 99999;
   width: 100%;
-  padding: 10px 0;
+  padding: 5px 0;
   transition: all 0.5s;
   height: -moz-fit-content;
   height: fit-content;
@@ -142,10 +241,6 @@ section.header a.navbar-brand {
 }
 .ib-nav-show a.navbar-brand:hover {
   color: rgb(0, 0, 0) !important;
-}
-
-#headerbtn2 {
-  display: none;
 }
 
 #headerbtn {
@@ -405,6 +500,7 @@ ul.dropdown-menu.show li a.dropdown-item {
 }
 #ib-progress-steps-bullet-pack {
   max-width: 100%;
+  margin: 50px auto;
   text-align: center;
   position: relative;
   font-family: "Poppins", sans-serif;
@@ -796,4 +892,247 @@ ul.dropdown-menu.show li a.dropdown-item {
 #progressbar-bullet-pack li.active-link:before, #progressbar-bullet-pack li.active-link:after {
   background: #06ba63;
   color: white;
+}
+
+span.ib_style_name {
+  font-size: 20px;
+  font-weight: 700;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 39px;
+  color: #0a2463;
+}
+
+.ib_style1 {
+  position: relative;
+}
+
+.ib_style1::before {
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  content: "";
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+}
+
+.ib_style1::after {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  content: "";
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+}
+
+.ib-doc-content {
+  padding: 0px 50px;
+}
+.ib-doc-content h2 {
+  font-weight: bold;
+  color: #0a2463;
+  margin-bottom: 20px;
+  font-size: 27px;
+}
+.ib-doc-content p {
+  color: #2f2f2f;
+  margin: 10px 0px;
+}
+.ib-doc-content h3 {
+  font-weight: bold;
+  color: #06ba63;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.ib-doc-content ul li {
+  font-size: 16px;
+  margin-left: 20px;
+  line-height: 26px;
+}
+.ib-doc-content h4 {
+  font-weight: bold;
+  color: #3b5249;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+pre code {
+  padding: 3em !important;
+}
+
+.ib-doc-content pre {
+  position: relative;
+  margin: 0;
+  white-space: pre-line;
+}
+
+.separate-components-top-menu {
+  display: none;
+}
+
+button.copy {
+  border: 0;
+  background: transparent;
+  width: 40px;
+  height: 40px;
+  background-color: #06b962;
+  color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  right: 25px;
+  transform: translateY(100%);
+}
+
+.copied:before {
+  content: "Copied";
+  visibility: visible;
+  display: block;
+  width: 80px;
+  background-color: #ead7d1;
+  color: #2f2f2f;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 5px;
+  right: 120%;
+}
+.copied:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent #ead7d1;
+}
+
+.ib_init_icon {
+  background-color: #06ba63;
+  padding: 20px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.ib_init_icon i {
+  font-size: 35px;
+  color: #ffffff;
+}
+
+.ib_init_text h2 {
+  font-size: 40px;
+  line-height: 44px;
+  font-weight: 600;
+  margin: 20px 0 15px 0;
+}
+
+.ib_init_text p, .ib_cdn_text p {
+  width: 60%;
+  font-size: 17px;
+  line-height: 28px;
+}
+
+.ib_cdn_text h4 {
+  font-weight: 600;
+  margin: 35px 0 15px 0;
+}
+
+.ib_cdn_css pre, .ib_cdn_js pre {
+  white-space: inherit;
+}
+
+.ib_cdn_css pre code, .ib_cdn_js pre code {
+  padding: 35px;
+}
+
+.ib_cdn_sec h5 {
+  font-weight: 600;
+}
+
+.installationcdn {
+  position: relative;
+}
+.installationcdn button.copy {
+  border: 0;
+  background: transparent;
+  width: 40px;
+  height: 40px;
+  background-color: #06b962;
+  color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+}
+.installationcdn .copied:before {
+  content: "Copied";
+  visibility: visible;
+  display: block;
+  width: 80px;
+  background-color: #ead7d1;
+  color: #2f2f2f;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 5px;
+  right: 120%;
+}
+.installationcdn .copied:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent #ead7d1;
+}
+
+@media (max-width: 400px) {
+  .ib_progress_step {
+    padding: 100px 0 100px 0;
+  }
+}
+@media (max-width: 992px) {
+  .sidebar-separate-components {
+    display: none;
+  }
+  .separate-components {
+    margin: 0 !important;
+    width: 100% !important;
+  }
+  .ib-doc-content {
+    padding: 0px 12px !important;
+  }
+  .separate-components-top-menu {
+    display: block !important;
+  }
+  .separate-components-top-menu li {
+    margin: 10px 0;
+  }
+  .separate-components-top-menu li a span.icon {
+    font-size: 20px;
+  }
+  .separate-components-top-menu li a span.title {
+    margin-left: 10px;
+    font-size: 16px;
+  }
+  .separate-components-top-menu li a span.title {
+    margin-left: 10px;
+    font-size: 16px;
+  }
+  .nav-pack-btn {
+    margin-top: 20px;
+  }
+  .navbar-light .navbar-toggler {
+    color: rgba(0, 0, 0, 0) !important;
+    border-color: rgba(0, 0, 0, 0) !important;
+  }
 }/*# sourceMappingURL=style.css.map */
