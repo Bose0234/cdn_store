@@ -1,0 +1,73 @@
+// Header Button
+
+@mixin outline-btn($new-color) {
+    color: $new-color !important;
+    border: 2px solid $new-color !important;
+    color: $new-color !important;
+    padding: 13px 40px;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 600;
+    z-index: 99;
+    overflow-y: hidden !important;
+    &:hover {
+      color: $white-clr !important;
+      background-color: transparent;
+  
+      &:before {
+        -webkit-animation: criss-cross-left 0.8s both;
+        animation: criss-cross-left 0.8s both;
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;
+      }
+    }
+    &:before {
+      position: absolute;
+      top: 50%;
+      content: "";
+      width: 20px;
+      height: 20px;
+      background-color: $new-color;
+      border-radius: 50%;
+      z-index: -1;
+    }
+    &:before {
+      left: -20px;
+      transform: translate(-50%, -50%);
+    }
+  }
+  @-webkit-keyframes criss-cross-left {
+    0% {
+      left: -20px;
+    }
+    50% {
+      left: 50%;
+      width: 20px;
+      height: 20px;
+    }
+    100% {
+      left: 50%;
+      width: 375px;
+      height: 375px;
+    }
+  }
+  
+  @keyframes criss-cross-left {
+    0% {
+      left: -20px;
+    }
+    50% {
+      left: 50%;
+      width: 20px;
+      height: 20px;
+    }
+    100% {
+      left: 50%;
+      width: 375px;
+      height: 375px;
+    }
+  }
+
+// Header Button End
